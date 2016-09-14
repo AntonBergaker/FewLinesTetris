@@ -4,10 +4,12 @@ Height: 600
 Background: #000000
 
 ### Object Create Event:
+```
 board = ds_grid_create(10,20); //generally you'd want to clear a grid. But I guess this is fine.
 placeable = ds_grid_create(4,4);
-
+```
 ### Object Draw Event:
+```
 room_speed = 30+score + keyboard_check(vk_down)*20;
 for (yy=0;yy<20;yy++) { //go through all rows drawing and clearing
     for (xx=0;xx<10;xx++) {
@@ -38,3 +40,4 @@ else {
     if (string_char_at(canMove,1)  == "0" && image_index mod (15-keyboard_check(vk_down)*13) == 0) { //add the pieces to field if you can move down and it's an update frame
         ds_grid_add_grid_region(board,placeable,0,0,ds_grid_width(placeable)-1,ds_grid_width(placeable)-1,(real(string_char_at(place,1))-1),real(string_delete(place,1,1)))
         ds_grid_clear(placeable,0)  }   } //clear the grid to show it's ready to be created again
+```
