@@ -4,12 +4,12 @@ Height: 600
 Background: #000000
 
 ### Object Create Event:
-```
+``` javascript
 board = ds_grid_create(10,20); //generally you'd want to clear a grid. But I guess this is fine.
 placeable = ds_grid_create(4,4);
 ```
 ### Object Draw Event:
-```
+``` javascript
 room_speed = 30+score + keyboard_check(vk_down)*20;
 for (yy=0;yy<20;yy++) { //go through all rows drawing and clearing
     for (xx=0;xx<10;xx++) {
